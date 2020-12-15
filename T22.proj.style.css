@@ -1,0 +1,147 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+
+.background{
+   background-color: rgb(0, 218, 152);
+   position: relative;
+   height: 100vh;
+   width: 100vw;
+}
+
+.container{
+   position: absolute;
+   width: 60vw;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   display: grid;
+   grid-template-areas: 'heading calculator calculator calculator'
+                        'heading calculator calculator calculator'
+                        'result result result result';
+   background-color: rgb(54, 54, 54);
+   border-radius: 30px;
+   box-shadow: 15px  15px 20px rgba(0, 0, 0, 0.3);
+   padding: 30px;
+   /* border: 2px solid white; */
+}
+
+.heading{
+   grid-area: heading;
+   display: flex;
+   color: white;
+   justify-content: center;
+   /* border: 2px solid rgb(255, 135, 135); */
+}
+
+.heading-inner{
+   border-left: 3px solid rgb(0, 218, 152);
+   color:rgb(0, 218, 152);
+   margin: auto 10px;
+   padding-left: 10px;
+}
+
+.heading-inner h2{
+   animation: text 0.6s linear infinite;
+   text-shadow: 5px 5px 5px black;
+}
+
+@keyframes text{
+   0%{
+      transform: scale(1.03);
+   }
+   20%{
+      transform: scale(1.00);
+
+   }
+   40%{
+      transform: scale(0.97);
+
+   }
+   60%{
+      transform: scale(0.94);
+   }
+   80%{
+      transform: scale(0.97);
+   }
+   100%{
+      transform: scale(1.0);
+   }
+   
+}
+
+.calculator{
+   grid-area: calculator;
+   display: flex;
+   /* border: 2px solid rgb(255, 255, 255); */
+}
+
+.hr{
+   height: 80%;
+   margin: auto 0;
+   border: .5px solid rgb(92, 92, 92);
+   
+}
+
+.app-form{
+   margin: auto auto;
+   width: 70%;
+   /* border: 2px solid red; */
+   
+}
+
+.app-form-group input{
+   border: none;
+   width: 100%;
+   border-bottom: 2px solid rgb(0, 218, 152);
+   margin-bottom: 20px;
+   padding: 10px;
+   box-sizing: border-box;
+   font-size: 15px;
+   background: transparent;
+   outline: none;
+   box-shadow: none;
+   color: rgb(153, 153, 153);
+   /* border: 2px solid rgb(51, 255, 0); */
+}
+
+.select-style select{
+   background-color: rgb(54, 54, 54);
+   width: 100%;
+   padding: 5px;
+   border: none;
+   color: rgba(153, 153, 153);
+   margin-bottom: 20px;
+   border-radius: 5px;
+}
+
+.submit-btn input{
+   width: 100%;
+   padding: 5px;
+   margin-bottom: 20px;
+   background: transparent;
+   border-radius: 5px;
+   background-color: rgb(0, 218, 152);
+   outline: none;
+   border: none;
+   box-shadow: none;
+   /* font-size: 19px; */
+}
+
+.submit-btn input:hover{
+   transition: ease-in 0.2s;
+   transform : scale(0.97);
+   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.514);
+   
+   
+}
+.result{
+   grid-area: result;
+   text-align: center;
+   color: white;
+   font-size: 15px;
+   /* border: 2px solid red; */
+}
